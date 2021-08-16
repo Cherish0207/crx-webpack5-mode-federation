@@ -1,0 +1,9 @@
+{
+  "name": "crx-webpack5-mode-federation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
