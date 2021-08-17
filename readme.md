@@ -30,6 +30,9 @@
 | exposes  | object | 被远程引用时可暴露的资源路径及其别名                                   |
 | shared   | object | 与其他应用之间可以共享的第三方依赖，使你的代码中不用重复加载同一份依赖 |
 
+shared 不保证版本的一致
+如 remote 里 react17,host 里 react16,它们可以共存. 当版本不同,会选取更高的版本
+
 #### 启动
 
 ```bash
@@ -39,3 +42,20 @@ npm start
 cd host
 npm start
 ```
+
+### 微前端
+
+- 模块联邦可以实现微前端,可能会取代乾坤
+- [emp](https://github.com/efoxTeam/emp)(一个微前端框架) 用的就是模块联邦
+  yy 语音 的技术前端方案叫 emp
+
+原理都是动态 import
+loadablecomponent
+
+项目模块共享
+有很多方案 npm
+[ModuleFederationWebpack5](https://github.com/sokra/slides/blob/master/content/ModuleFederationWebpack5.md)
+
+lerna init
+
+其实原理就是利用了 jsonp,加载完读取了 window 的变量,然后使用

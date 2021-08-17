@@ -5,7 +5,7 @@ module.exports = {
   mode: "development",
   entry: "./src/index.js",
   output: {
-    publicPath: "http://localhost:8081/",
+    publicPath: "http://localhost:8081/", // 访问静态资源路径 默认是/
   },
   devtool: false,
   devServer: {
