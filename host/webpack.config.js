@@ -1,11 +1,13 @@
 let path = require("path");
 let HtmlWebpackPlugin = require("html-webpack-plugin");
+const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 module.exports = {
   mode: "development",
   entry: "./src/index.js",
   output: {
     publicPath: "http://localhost:8081/",
   },
+  devtool: false,
   devServer: {
     port: 8081,
   },
@@ -26,6 +28,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
+    }),
+    new ModuleFederationPlugin({
+      name: "host",
+      remotes: {
+        remote: "remoteVar@http://localhost:8080/remoteEntry.js ", // 随意起的全局变量名
+      },
     }),
   ],
 };
