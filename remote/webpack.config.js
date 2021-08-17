@@ -36,6 +36,9 @@ module.exports = {
         "./NewsList": "./src/NewsList",
       },
       shared: ["reace", "react-dom"], // 共享模块,任何一方加载过了,另一个就不需要加载了 中间放了一个share scope共享池共享作用于
+      remotes: {
+        host: "hostVar@http://localhost:8081/remoteEntry.js ", // 随意起的全局变量名
+      },
     }),
   ],
 };

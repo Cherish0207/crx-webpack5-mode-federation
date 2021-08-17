@@ -30,9 +30,13 @@ module.exports = {
       template: "./public/index.html",
     }),
     new ModuleFederationPlugin({
-      name: "host",
+      name: "hostVar",
       remotes: {
         remote: "remoteVar@http://localhost:8080/remoteEntry.js ", // 随意起的全局变量名
+      },
+      filename: "remoteEntry.js",
+      exposes: {
+        "./Slides": "./src/Slides",
       },
     }),
   ],
