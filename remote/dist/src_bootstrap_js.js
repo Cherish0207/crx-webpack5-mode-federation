@@ -42,9 +42,11 @@
     "./src/bootstrap.js": (module, exports, require) => {
       require.r(exports);
       var react__WEBPACK_IMPORTED_MODULE_0__ = require("./node_modules/react/index.js");
-      var react_dom__WEBPACK_IMPORTED_MODULE_1__ = require("./node_modules/react-dom/index.js");
+      var react_dom__WEBPACK_IMPORTED_MODULE_1__ = require("webpack/sharing/consume/default/react-dom/react-dom");
+      var react_dom__WEBPACK_IMPORTED_MODULE_1___default =
+        /*#__PURE__*/ require.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
       var _App__WEBPACK_IMPORTED_MODULE_2__ = require("./src/App.js");
-      react_dom__WEBPACK_IMPORTED_MODULE_1__.render(
+      react_dom__WEBPACK_IMPORTED_MODULE_1___default().render(
         /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.createElement(
           _App__WEBPACK_IMPORTED_MODULE_2__.default,
           null
