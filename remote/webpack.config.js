@@ -8,6 +8,7 @@ module.exports = {
   output: {
     publicPath: "http://localhost:8080/",
   },
+  experiments: { topLevelAwait: true },
   devServer: {
     port: 8080,
   },
